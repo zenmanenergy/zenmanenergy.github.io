@@ -9,14 +9,19 @@ var connection;
         return { status:2, msg:'Ready' };
     };
 	
-	ext.connect = function(ip) {
+	ext.connect = function(device) {
+		
+		var ip="";
+		if (device==1){
+			ip="192.168.1.150";
+		}
 		
     	console.log("connect");
     	console.log(ip);
     	console.log(connection);
     	if (!connection || connection.readyState > 1){
     		console.log("not isConnected");
-	    	connection = new WebSocket('ws://192.168.1.135:81/test', ['arduino']);
+	    	connection = new WebSocket(ip+":81/test", ['arduino']);
 			connection.onopen = function () {
 				console.log("connection open");
 				
