@@ -13,7 +13,25 @@ var connection;
 		
 		var ip="";
 		if (device==1){
-			ip="192.168.1.150";
+			ip="172.20.10.51";
+		} else if (device==2){
+			ip="172.20.10.52";
+		} else if (device==3){
+			ip="172.20.10.53";
+		} else if (device==4){
+			ip="172.20.10.54";
+		} else if (device==5){
+			ip="172.20.10.55";
+		} else if (device==6){
+			ip="172.20.10.56";
+		} else if (device==7){
+			ip="172.20.10.57";
+		} else if (device==8){
+			ip="172.20.10.58";
+		} else if (device==9){
+			ip="172.20.10.59";
+		} else if (device==10){
+			ip="172.20.10.60";
 		}
 		
     	console.log("connect");
@@ -21,7 +39,8 @@ var connection;
     	console.log(connection);
     	if (!connection || connection.readyState > 1){
     		console.log("not isConnected");
-	    	connection = new WebSocket(ip+":81/test", ['arduino']);
+    		console.log("connecting... "+ ip+":81/test");
+	    	connection = new WebSocket("ws://" +ip+":81/test", ['arduino']);
 			connection.onopen = function () {
 				console.log("connection open");
 				
