@@ -13,9 +13,9 @@ var connection;
 		
 		var ip="";
 		if (device==1){
-			ip="172.20.10.51";
+			ip="172.20.10.10";
 		} else if (device==2){
-			ip="172.20.10.52";
+			ip="172.20.10.11";
 		} else if (device==3){
 			ip="172.20.10.53";
 		} else if (device==4){
@@ -27,7 +27,7 @@ var connection;
 		} else if (device==7){
 			ip="172.20.10.57";
 		} else if (device==8){
-			ip="172.20.10.58";
+			ip="172.20.10.11";
 		} else if (device==9){
 			ip="172.20.10.59";
 		} else if (device==10){
